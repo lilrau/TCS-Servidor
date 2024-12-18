@@ -1,7 +1,11 @@
-using TCS_Cliente.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using TCS_Cliente.Data;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System.Text;
+using TCS_Cliente.Data;
+using TCS_Cliente.Services;
+using Microsoft.AspNetCore.Mvc;
 
 public class Program
 {
@@ -14,6 +18,9 @@ public class Program
         Host.CreateDefaultBuilder(args)
             .ConfigureWebHostDefaults(webBuilder =>
             {
+                // Aqui configuramos as URLs diretamente no WebHostBuilder
+                webBuilder.UseUrls("http://localhost:21232", "https://localhost:21233");
+
                 webBuilder.ConfigureServices((context, services) =>
                 {
                     // Registrando o serviço UserService
@@ -23,30 +30,89 @@ public class Program
                     services.AddDbContext<AppDbContext>(options =>
                         options.UseSqlite("Data Source=app.db"));
 
-                    // Adicionando o Swagger
+                    // Configuração de autenticação JWT
+                    var jwtKey = context.Configuration["Jwt:Key"] ?? "default_secret_key"; // Lendo chave de configurações ou variável de ambiente
+
+                    services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                        .AddJwtBearer(options =>
+                        {
+                            options.TokenValidationParameters = new TokenValidationParameters
+                            {
+                                ValidateIssuer = false,
+                                ValidateAudience = false,
+                                ValidateLifetime = true,
+                                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+                                ClockSkew = TimeSpan.Zero
+                            };
+                        });
+
+                    // Configuração do Swagger
                     services.AddSwaggerGen(c =>
                     {
                         c.SwaggerDoc("v1", new OpenApiInfo { Title = "TCS Cliente API", Version = "v1" });
+                        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                        {
+                            Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                            Name = "Authorization",
+                            In = ParameterLocation.Header,
+                            Type = SecuritySchemeType.ApiKey
+                        });
+                        c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                        {
+                            {
+                                new OpenApiSecurityScheme
+                                {
+                                    Reference = new OpenApiReference
+                                    {
+                                        Type = ReferenceType.SecurityScheme,
+                                        Id = "Bearer"
+                                    }
+                                },
+                                Array.Empty<string>()
+                            }
+                        });
                     });
 
-                    services.AddControllers();
+                    services.AddControllers()
+                        .ConfigureApiBehaviorOptions(options =>
+                        {
+                            options.InvalidModelStateResponseFactory = context =>
+                                new BadRequestObjectResult(new { mensagem = "Dados inválidos" });
+                        });
                 });
 
-                webBuilder.Configure(app =>
+                webBuilder.Configure((context, app) =>
                 {
-                    app.UseRouting();
+                    var env = context.HostingEnvironment;
 
-                    // Habilitando o Swagger
+                    if (env.IsDevelopment())
+                    {
+                        app.UseDeveloperExceptionPage();
+                    }
+                    else
+                    {
+                        app.UseExceptionHandler("/error");
+                    }
+
+                    app.UseCors(builder => builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+
+                    // Caso queira forçar HTTPS em produção, descomente a linha abaixo
+                    // app.UseHttpsRedirection();
+
+                    app.UseRouting();
+                    app.UseAuthentication();
+                    app.UseAuthorization();
+
+                    // Configuração do Swagger
                     app.UseSwagger();
                     app.UseSwaggerUI(c =>
                     {
                         c.SwaggerEndpoint("/swagger/v1/swagger.json", "TCS Cliente API v1");
-                        c.RoutePrefix = "swagger"; // Mudei para 'swagger'
+                        c.RoutePrefix = "swagger";
                     });
-
-
-                    app.UseAuthentication();
-                    app.UseAuthorization();
 
                     app.UseEndpoints(endpoints =>
                     {

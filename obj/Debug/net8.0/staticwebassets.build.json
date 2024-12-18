@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "3lJ2HlII1zgEOD5aWIdZO0TPXwHYFZ1PK1MxV3yBsoE=",
-  "Source": "TCS-Cliente",
-  "BasePath": "_content/TCS-Cliente",
+  "Hash": "w6ERkBJ2bJxj9fQNH2r1BFb5B1lJkgYqUYg76G3gspQ=",
+  "Source": "TCS-Servidor",
+  "BasePath": "_content/TCS-Servidor",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
