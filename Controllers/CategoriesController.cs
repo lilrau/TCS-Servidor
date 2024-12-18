@@ -18,35 +18,44 @@ namespace TCS_Cliente.Controllers
         }
 
         [HttpPost]
-        [Authorize] // Garante que o usuário está autenticado
+        [Authorize]
         public IActionResult Register([FromBody] Category category)
         {
-            if (!ModelState.IsValid)
+            // Valida o modelo
+            if (!ModelState.IsValid || string.IsNullOrWhiteSpace(category.Nome))
             {
                 return BadRequest(new { mensagem = "Dados inválidos" });
             }
 
-            // Obtém o email do usuário autenticado
+            // Tenta obter o email do usuário autenticado
             var currentUserEmail = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
 
-            // Verifica se o usuário autenticado é um administrador
-            var currentUser = _context.Users.SingleOrDefault(u => u.Email == currentUserEmail);
-
-            if (currentUser == null || currentUser.isAdmin != 1) // Verifica se é admin
+            // Se o token não contém informações válidas
+            if (currentUserEmail == null)
             {
-                return Unauthorized(new { mensagem = "Você não tem permissão suficiente para performar esta ação" });
-
+                return StatusCode(403, new { mensagem = "Você não tem permissão suficiente para performar esta ação" });
             }
 
-            // Adiciona a nova categoria ao banco
+            // Busca o usuário no banco
+            var currentUser = _context.Users.SingleOrDefault(u => u.Email == currentUserEmail);
+
+            // Verifica se o usuário é admin
+            if (currentUser == null || currentUser.isAdmin != 1)
+            {
+                return StatusCode(403, new { mensagem = "Você não tem permissão suficiente para performar esta ação" });
+            }
+
+            // Adiciona a categoria ao banco
             _context.Categories.Add(category);
             _context.SaveChanges();
 
-            return StatusCode(201); // Retorna 201 Created
+            return StatusCode(201, new { mensagem = "Categoria criada com sucesso", categoria = category });
         }
 
+
+
         [HttpPut("{id}")]
-        [Authorize] // Garante que o usuário está autenticado
+        [Authorize]
         public IActionResult UpdateCategory(int id, [FromBody] Category category)
         {
             if (!ModelState.IsValid)
@@ -54,18 +63,14 @@ namespace TCS_Cliente.Controllers
                 return BadRequest(new { mensagem = "Dados inválidos" });
             }
 
-            // Obtém o email do usuário autenticado
             var currentUserEmail = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-
-            // Verifica se o usuário autenticado é um administrador
             var currentUser = _context.Users.SingleOrDefault(u => u.Email == currentUserEmail);
 
-            if (currentUser == null || currentUser.isAdmin != 1) // Verifica se é admin
+            if (currentUser == null || currentUser.isAdmin != 1)
             {
                 return Unauthorized(new { mensagem = "Você não tem permissão suficiente para performar esta ação" });
             }
 
-            // Busca a categoria no banco
             var existingCategory = _context.Categories.SingleOrDefault(c => c.Id == id);
 
             if (existingCategory == null)
@@ -73,30 +78,24 @@ namespace TCS_Cliente.Controllers
                 return NotFound(new { mensagem = "Categoria não encontrada" });
             }
 
-            // Atualiza a categoria
-            existingCategory.Nome = category.Nome; // Ajuste conforme os campos necessários
-
+            existingCategory.Nome = category.Nome;
             _context.SaveChanges();
 
-            return Ok(existingCategory); // Retorna a categoria atualizada
+            return Ok(new { mensagem = "Categoria atualizada com sucesso", categoria = existingCategory });
         }
 
         [HttpDelete("{id}")]
-        [Authorize] // Garante que o usuário está autenticado
+        [Authorize]
         public IActionResult DeleteCategory(int id)
         {
-            // Obtém o email do usuário autenticado
             var currentUserEmail = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-
-            // Verifica se o usuário autenticado é um administrador
             var currentUser = _context.Users.SingleOrDefault(u => u.Email == currentUserEmail);
 
-            if (currentUser == null || currentUser.isAdmin != 1) // Verifica se é admin
+            if (currentUser == null || currentUser.isAdmin != 1)
             {
                 return Unauthorized(new { mensagem = "Você não tem permissão suficiente para performar esta ação" });
             }
 
-            // Busca a categoria no banco
             var category = _context.Categories.SingleOrDefault(c => c.Id == id);
 
             if (category == null)
@@ -104,12 +103,24 @@ namespace TCS_Cliente.Controllers
                 return NotFound(new { mensagem = "Categoria não encontrada" });
             }
 
-            // Remover a categoria do banco
             _context.Categories.Remove(category);
             _context.SaveChanges();
 
-            // Retorna uma resposta de sucesso com a categoria removida
-            return Ok(new { mensagem = "Categoria excluída com sucesso" });
+            return Ok(new { mensagem = "Categoria excluída com sucesso", id = category.Id });
+        }
+
+        [HttpGet]
+        public IActionResult GetAllCategories()
+        {
+            // Recupera todas as categorias do banco de dados
+            var categories = _context.Categories.Select(c => new
+            {
+                c.Id,
+                c.Nome
+            }).ToList();
+
+            // Retorna as categorias no formato esperado
+            return Ok(categories);
         }
     }
 }
