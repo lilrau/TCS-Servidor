@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rauls\\OneDrive\\Documents\\Scripts\\TCS-Servidor\\",
+  "WorkspaceRootPath": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\rauls\\onedrive\\documents\\scripts\\tcs-servidor\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\hikaru\\documents\\tcs-servidor\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\rauls\\onedrive\\documents\\scripts\\tcs-servidor\\models\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\hikaru\\documents\\tcs-servidor\\models\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:models\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,9 +24,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\rauls\\OneDrive\\Documents\\Scripts\\TCS-Servidor\\Controllers\\CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\rauls\\OneDrive\\Documents\\Scripts\\TCS-Servidor\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "Controllers\\CategoriesController.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAIwGwAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -37,14 +37,13 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CategoryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\rauls\\OneDrive\\Documents\\Scripts\\TCS-Servidor\\Models\\CategoryRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Models\\CategoryRequest.cs",
               "RelativeDocumentMoniker": "Models\\CategoryRequest.cs",
-              "ToolTip": "C:\\Users\\rauls\\OneDrive\\Documents\\Scripts\\TCS-Servidor\\Models\\CategoryRequest.cs",
+              "ToolTip": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Models\\CategoryRequest.cs",
               "RelativeToolTip": "Models\\CategoryRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T03:50:46.852Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-18T03:50:46.852Z"
             }
           ]
         },

@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "TCS_Cliente.Controllers.CategoriesController",
+    "Method": "GetAllCategories",
+    "RelativePath": "categorias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TCS_Cliente.Controllers.CategoriesController",
     "Method": "UpdateCategory",
     "RelativePath": "categorias/{id}",
     "HttpMethod": "PUT",
