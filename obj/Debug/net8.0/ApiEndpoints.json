@@ -1,5 +1,74 @@
 [
   {
+    "ContainingType": "TCS_Cliente.Controllers.NoticesController",
+    "Method": "CreateNotice",
+    "RelativePath": "avisos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "notice",
+        "Type": "TCS_Cliente.Models.Notice",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TCS_Cliente.Controllers.NoticesController",
+    "Method": "UpdateNotice",
+    "RelativePath": "avisos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "notice",
+        "Type": "TCS_Cliente.Models.Notice",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TCS_Cliente.Controllers.NoticesController",
+    "Method": "DeleteNotice",
+    "RelativePath": "avisos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TCS_Cliente.Controllers.NoticesController",
+    "Method": "GetNoticesByCategory",
+    "RelativePath": "avisos/{idCategoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCategoria",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "TCS_Cliente.Controllers.CategoriesController",
     "Method": "Register",
     "RelativePath": "categorias",

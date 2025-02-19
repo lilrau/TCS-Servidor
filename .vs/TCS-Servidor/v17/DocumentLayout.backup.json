@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\",
+  "WorkspaceRootPath": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\hikaru\\documents\\tcs-servidor\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\rauls\\source\\repos\\tcs-servidor\\controllers\\noticescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:controllers\\noticescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\rauls\\source\\repos\\tcs-servidor\\models\\notice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:models\\notice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\rauls\\source\\repos\\tcs-servidor\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\hikaru\\documents\\tcs-servidor\\models\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:models\\categoryrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|c:\\users\\rauls\\source\\repos\\tcs-servidor\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58929F0B-DB74-4BD2-9F11-E5BE22EF1469}|TCS-Servidor.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +31,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAIwGwAAABdAAAAAAAAAA==",
+              "Title": "NoticesController.cs",
+              "DocumentMoniker": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Controllers\\NoticesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NoticesController.cs",
+              "ToolTip": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Controllers\\NoticesController.cs",
+              "RelativeToolTip": "Controllers\\NoticesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T03:52:17.52Z",
+              "WhenOpened": "2025-02-19T02:43:37.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CategoryRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Models\\CategoryRequest.cs",
-              "RelativeDocumentMoniker": "Models\\CategoryRequest.cs",
-              "ToolTip": "C:\\Users\\Hikaru\\Documents\\TCS-Servidor\\Models\\CategoryRequest.cs",
-              "RelativeToolTip": "Models\\CategoryRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "Notice.cs",
+              "DocumentMoniker": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Models\\Notice.cs",
+              "RelativeDocumentMoniker": "Models\\Notice.cs",
+              "ToolTip": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Models\\Notice.cs",
+              "RelativeToolTip": "Models\\Notice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T03:50:46.852Z"
+              "WhenOpened": "2025-02-19T02:48:42.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAYwH4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:46:53.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T02:54:35.713Z",
+              "EditorCaption": ""
             }
           ]
         },
