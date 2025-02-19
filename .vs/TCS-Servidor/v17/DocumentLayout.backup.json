@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Controllers\\NoticesController.cs",
               "ToolTip": "C:\\Users\\rauls\\source\\repos\\TCS-Servidor\\Controllers\\NoticesController.cs",
               "RelativeToolTip": "Controllers\\NoticesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowEQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-19T02:43:37.643Z",
               "EditorCaption": ""
@@ -51,8 +51,7 @@
               "RelativeToolTip": "Models\\Notice.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T02:48:42.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T02:48:42.849Z"
             },
             {
               "$type": "Document",
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Controllers\\CategoriesController.cs",
               "ViewState": "AgIAAEwAAAAAAAAAAAAYwH4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T02:46:53.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T02:46:53.5Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-19T02:54:35.713Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-19T02:54:35.713Z"
             }
           ]
         },

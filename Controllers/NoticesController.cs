@@ -60,6 +60,21 @@ namespace TCS_Cliente.Controllers
             return StatusCode(201, new { mensagem = "Aviso criado com sucesso", aviso = notice });
         }
 
+        [HttpGet]
+        public IActionResult GetAllNotices()
+        {
+            // Recupera todos os avisos do banco de dados
+            var notices = _context.Notices
+                .Select(n => new
+                {
+                    n.Id,
+                    n.Descricao,
+                    n.CategoriaId
+                }).ToList();
+
+            return Ok(notices);
+        }
+
         [HttpGet("{idCategoria}")]
         public IActionResult GetNoticesByCategory(int idCategoria)
         {

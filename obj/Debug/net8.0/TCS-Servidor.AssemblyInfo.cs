@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TCS-Servidor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d485fdd35ae6f664411f73b2e0c81e1594e304d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+882980955d40fd5adcbb1145af6bae3554985509")]
 [assembly: System.Reflection.AssemblyProductAttribute("TCS-Servidor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TCS-Servidor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

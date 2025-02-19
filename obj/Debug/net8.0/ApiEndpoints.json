@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "TCS_Cliente.Controllers.NoticesController",
+    "Method": "GetAllNotices",
+    "RelativePath": "avisos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TCS_Cliente.Controllers.NoticesController",
     "Method": "UpdateNotice",
     "RelativePath": "avisos/{id}",
     "HttpMethod": "PUT",
